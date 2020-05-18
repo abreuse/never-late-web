@@ -1,0 +1,11 @@
+<h1>Prochains départs en gare de {{trainStation}}</h1>
+
+<span>Horaires pour quelle gare ? </span>
+<input type="text" [(ngModel)]="trainStation"/>
+<button class="btn-primary" (click)="getDeparturesResponse()">Search</button>
+
+<ul class="departures" *ngFor="let departure of departures">
+  <li class="badge">{{departure.line}}</li>
+  <li>{{departure.direction}}</li>
+  <li>{{departure.departure}}</li>
+</ul>
